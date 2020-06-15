@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="plg_system_jxj" version="2.9.1">
+  <partials/>
+  <file path="helper/JxjHelper.php" generated-path="helper.JxjHelper.html" hash="1f8c35f38d25906039f0fea8cdfaf9aa" package="helper">
+    <docblock line="0">
+      <description>Helper class to decouple functionality from the main plugin
+and hopefully making it easier to test</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="helper"/>
+      <tag name="author" line="0" description="Alexandre ELISÉ" link="mailto:contact@alexandre-elise.fr"/>
+      <tag name="link" line="0" description="https://alexandre-elise.fr" link="https://alexandre-elise.fr"/>
+      <tag name="copyright" line="0" description="(c) 2020 . Alexandre ELISÉ . Tous droits réservés."/>
+      <tag name="license" line="0" description="GPL-2.0-and-later GNU General Public License v2.0 or later&#10;Created Date : 13/06/2020&#10;Created Time : 09:38"/>
+    </docblock>
+    <namespace-alias name="OutputFilter">\Joomla\CMS\Filter\OutputFilter</namespace-alias>
+    <namespace-alias name="Log">\Joomla\CMS\Log\Log</namespace-alias>
+    <class final="true" abstract="false" namespace="" line="25" package="helper">
+      <extends/>
+      <name>JxjHelper</name>
+      <full_name>\JxjHelper</full_name>
+      <docblock line="25">
+        <description>Class J4xconnectorHelper</description>
+        <long-description></long-description>
+        <tag name="package" line="25" description="helper"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="" line="32" package="helper">
+        <name>$params</name>
+        <full_name>\JxjHelper::$params</full_name>
+        <default></default>
+        <docblock line="32">
+          <description>Parameters coming from the plugin configuration</description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="\Joomla\Registry\Registry" variable="$params">
+            <type>\Joomla\Registry\Registry</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="39" package="helper">
+        <name>$logger</name>
+        <full_name>\JxjHelper::$logger</full_name>
+        <default></default>
+        <docblock line="39">
+          <description>PSR-3 compatible Logger available since Joomla! 3.8</description>
+          <long-description></long-description>
+          <tag name="var" line="39" description="" type="\Joomla\CMS\Log\DelegatingPsrLogger" variable="">
+            <type>\Joomla\CMS\Log\DelegatingPsrLogger</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="46" package="helper">
+        <name>__construct</name>
+        <full_name>\JxjHelper::__construct()</full_name>
+        <docblock line="46">
+          <description>J4xconnectorHelper constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="46" description="" type="" variable="$params"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="56" package="helper">
+        <name>getLogger</name>
+        <full_name>\JxjHelper::getLogger()</full_name>
+        <docblock line="56">
+          <description>PSR-3 compatible logger available since Joomla! 3.8</description>
+          <long-description></long-description>
+          <tag name="return" line="56" description="" type="\Joomla\CMS\Log\DelegatingPsrLogger">
+            <type>\Joomla\CMS\Log\DelegatingPsrLogger</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="68" package="helper">
+        <name>addArticle</name>
+        <full_name>\JxjHelper::addArticle()</full_name>
+        <docblock line="68">
+          <description>Use Http request to create (add) an article using the webservice endpoint (or route)</description>
+          <long-description></long-description>
+          <tag name="param" line="68" description="" type="array" variable="$current_data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="68" description="" type="string|boolean">
+            <type>string</type>
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$current_data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="84" package="helper">
+        <name>getBasePath</name>
+        <full_name>\JxjHelper::getBasePath()</full_name>
+        <docblock line="84">
+          <description>The base_path (scheme + domain) of the Joomla! website you want to "communicate" with</description>
+          <long-description></long-description>
+          <tag name="return" line="84" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="95" package="helper">
+        <name>getApiToken</name>
+        <full_name>\JxjHelper::getApiToken()</full_name>
+        <docblock line="95">
+          <description>Api token of the webservice we want to "communicate" with</description>
+          <long-description></long-description>
+          <tag name="return" line="95" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="107" package="helper">
+        <name>getArticleCategoryId</name>
+        <full_name>\JxjHelper::getArticleCategoryId()</full_name>
+        <docblock line="107">
+          <description>The default remote category where to create articles into</description>
+          <long-description></long-description>
+          <tag name="return" line="107" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="119" package="helper">
+        <name>processData</name>
+        <full_name>\JxjHelper::processData()</full_name>
+        <docblock line="119">
+          <description>Filtered keys to use when creating an article</description>
+          <long-description></long-description>
+          <tag name="param" line="119" description="" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="119" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="173" package="helper">
+        <name>postJsonDataUsingStream</name>
+        <full_name>\JxjHelper::postJsonDataUsingStream()</full_name>
+        <docblock line="173">
+          <description>Send http request using builtin PHP streams
+NOTE:
+verify_peer =&gt; false
+verify_peer_name =&gt; false
+allow_self_signed =&gt; true
+is INSECURE
+Use it only on dev environments</description>
+          <long-description></long-description>
+          <tag name="param" line="173" description="" type="" variable="$url"/>
+          <tag name="param" line="173" description="" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="173" description="" type="false|string">
+            <type>false</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="" line="204" package="helper">
+        <name>getHeaderFromWebsiteVersion</name>
+        <full_name>\JxjHelper::getHeaderFromWebsiteVersion()</full_name>
+        <docblock line="204">
+          <description>Add HTTP headers corresponding to each Joomla! version or API used
+(Quick note: might want to find a better solution to handle this)</description>
+          <long-description></long-description>
+          <tag name="param" line="204" description="" type="" variable="$website_version"/>
+          <tag name="return" line="204" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$website_version</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="jxj.php" generated-path="jxj.html" hash="0e7ac84342aa95cdb21bcb69b4cb2418" package="jxj">
+    <docblock line="0">
+      <description>System plugin to make 2 Joomla! website communicate together via webservices.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="jxj"/>
+      <tag name="author" line="0" description="Alexandre ELISÉ" link="mailto:contact@alexandre-elise.fr"/>
+      <tag name="link" line="0" description="https://alexandre-elise.fr" link="https://alexandre-elise.fr"/>
+      <tag name="copyright" line="0" description="(c) 2020 . Alexandre ELISÉ . Tous droits réservés."/>
+      <tag name="license" line="0" description="GPL-2.0-and-later GNU General Public License v2.0 or later&#10;Created Date : 11/06/2020&#10;Created Time : 17:53"/>
+    </docblock>
+    <namespace-alias name="CMSPlugin">\Joomla\CMS\Plugin\CMSPlugin</namespace-alias>
+    <class final="false" abstract="false" namespace="" line="24" package="jxj">
+      <extends>\Joomla\CMS\Plugin\CMSPlugin</extends>
+      <name>PlgSystemJxj</name>
+      <full_name>\PlgSystemJxj</full_name>
+      <docblock line="24">
+        <description>Class PlgSystemJxj</description>
+        <long-description></long-description>
+        <tag name="package" line="24" description="jxj"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="" line="30" package="jxj">
+        <name>$app</name>
+        <full_name>\PlgSystemJxj::$app</full_name>
+        <default></default>
+        <docblock line="30">
+          <description>The CMS Application</description>
+          <long-description></long-description>
+          <tag name="var" line="30" description="" type="\Joomla\CMS\Application\CMSApplication" variable="">
+            <type>\Joomla\CMS\Application\CMSApplication</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="" line="38" package="jxj">
+        <name>$autoloadLanguage</name>
+        <full_name>\PlgSystemJxj::$autoloadLanguage</full_name>
+        <default>true</default>
+        <docblock line="38">
+          <description>Load the language file on instantiation.</description>
+          <long-description></long-description>
+          <tag name="var" line="38" description="" type="boolean" variable="">
+            <type>boolean</type>
+          </tag>
+          <tag name="since" line="38" description="3.7.0"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="" line="46" package="jxj">
+        <name>$helper</name>
+        <full_name>\PlgSystemJxj::$helper</full_name>
+        <default></default>
+        <docblock line="46">
+          <description>Convenient helper class to extract functionality
+and hopefully make it easier to test</description>
+          <long-description></long-description>
+          <tag name="var" line="46" description="" type="\JxjHelper" variable="">
+            <type>\JxjHelper</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="54" package="jxj">
+        <name>__construct</name>
+        <full_name>\PlgSystemJxj::__construct()</full_name>
+        <docblock line="54">
+          <description>PlgSystemJxj constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="54" description="" type="" variable="$subject"/>
+          <tag name="param" line="54" description="" type="array" variable="$config">
+            <type>array</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$subject</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$config</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="77" package="jxj">
+        <name>onContentAfterSave</name>
+        <full_name>\PlgSystemJxj::onContentAfterSave()</full_name>
+        <docblock line="77">
+          <description>Create the same article on both Joomla! websites onContentAfterSave event</description>
+          <long-description></long-description>
+          <tag name="param" line="77" description="&lt;p&gt;The context&lt;/p&gt;" type="string" variable="$context">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="77" description="&lt;p&gt;The table&lt;/p&gt;" type="\JTable" variable="$item">
+            <type>\JTable</type>
+          </tag>
+          <tag name="param" line="77" description="&lt;p&gt;Is new item&lt;/p&gt;" type="boolean" variable="$isNew">
+            <type>boolean</type>
+          </tag>
+          <tag name="param" line="77" description="&lt;p&gt;The validated data&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="77" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="since" line="77" description="3.7.0"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$context</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$item</name>
+          <default></default>
+          <type>\JTable</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$isNew</name>
+          <default></default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <package name="global" full_name="global"/>
+  <package name="helper" full_name="helper"/>
+  <package name="jxj" full_name="jxj"/>
+  <namespace name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>
