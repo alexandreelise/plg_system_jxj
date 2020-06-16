@@ -174,7 +174,7 @@ final class JxjHelper
 	{
 		$data_string = json_encode($data);
 		
-		$result = file_get_contents($url, null, stream_context_create(
+		$result = file_get_contents($url, false, stream_context_create(
 			[
 				'http' => [
 					'method'  => 'POST',
