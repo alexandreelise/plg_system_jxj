@@ -32,7 +32,7 @@ onContentAfterSave the plugin will communicate with your j4x website using the s
 
 
 ## SPECIAL THANKS
-I would like to thank to Marc DECHÈVRE for giving me the oppotunity to share my knowledge of Joomla! publicly in a live Youtube session on Friday June 12th 2020. It's in French, but hopefully you will get the overall idea of what are webservices in Joomla! 4.
+I would like to thank to Marc DECHÈVRE for giving me the opportunity to share my knowledge of Joomla! publicly in a live Youtube session on Friday June 12th 2020. It's in French, but hopefully you will get the overall idea of what are webservices in Joomla! 4.
 
 ## THANKS
 - Techjoomla team for their cool extension com_api
