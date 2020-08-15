@@ -1,6 +1,6 @@
 # JxJ
 
-![logo] (https://alexandre-elise.fr/images/extensions/plugins/system/jxj/github-social-image-plugin-system-jxj.png "Jxj logo by A.E")
+![jxj logo](https://alexandre-elise.fr/images/extensions/plugins/system/jxj/github-social-image-plugin-system-jxj.png "Jxj logo by A.E")
 
 ## plg_system_jxj
 TLDR; JXJ is system plugin to make 2 Joomla! websites communicate via webservices.
