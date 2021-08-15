@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<form>
+    <fieldset name="fieldset_jbox">
+        <field name="website_version"
+               type="list"
+               default="0"
+               label="PLG_SYSTEM_JXJ_WEBSITE_VERSION_LABEL"
+               description="PLG_SYSTEM_JXJ_WEBSITE_VERSION_DESCRIPTION"
+               filter="uint"
+        >
+            <option value="0">PLG_SYSTEM_JXJ_WEBSITE_VERSION_0</option>
+            <option value="3">PLG_SYSTEM_JXJ_WEBSITE_VERSION_3</option>
+            <option value="4">PLG_SYSTEM_JXJ_WEBSITE_VERSION_4</option>
+        </field>
+        <field name="direction"
+               type="radio"
+               label="PLG_SYSTEM_JXJ_DIRECTION_LABEL"
+               description="PLG_SYSTEM_JXJ_DIRECTION_DESCRIPTION"
+               default="0"
+               filter="uint"
+               class="btn-group btn-groupyesno"
+        >
+            <option value="0">PLG_SYSTEM_JXJ_DIRECTION_0</option>
+            <option value="1">PLG_SYSTEM_JXJ_DIRECTION_1</option>
+            <option value="2">PLG_SYSTEM_JXJ_DIRECTION_2</option>
+        </field>
+        <field name="base_path"
+               type="url"
+               filter="url"
+               validate="url"
+               default=""
+               hint="PLG_SYSTEM_JXJ_BASE_PATH_HINT"
+               label="PLG_SYSTEM_JXJ_BASE_PATH_LABEL"
+               description="PLG_SYSTEM_JXJ_BASE_PATH_DESCRIPTION"
+        />
+        <field name="api_token"
+               type="text"
+               filter="string"
+               label="PLG_SYSTEM_JXJ_API_TOKEN_LABEL"
+               description="PLG_SYSTEM_JXJ_API_TOKEN_DESCRIPTION"/>
+        <field name="category_id"
+               type="text"
+               filter="uint"
+               default="2"
+               label="PLG_SYSTEM_JXJ_CATEGORY_ID_LABEL"
+               description="PLG_SYSTEM_JXJ_CATEGORY_ID_DESCRIPTION"/>
+    </fieldset>
+</form>
