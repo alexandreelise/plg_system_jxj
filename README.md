@@ -16,11 +16,11 @@ I called it JxJ pronounced J "x" J because it's Joomla! times Joomla!, Joomla! w
 My name is Alexandre ELISÉ, I am a French web developer and Joomla! specialist. The idea came from a demo I needed to make for Virtual Joomladay France on Friday June 12th 2020. A friend of mine, Marc, told me that it would be great to make two Joomla! websites communicate together. 
 
 ## WHAT?
-It is a unified system plugin that should work on both Joomla! 3.9 and Joomla! 4.x beta 1
+It is a unified system plugin that should work on both Joomla! 3.9 and Joomla! 4.x
 
 ## HOW?
 j3x -> j4x communication is using PHP streams to make an HTTP request to the j4x webservice endpoint providing the api token.
-For j4x -> j3x communication it is more tricky because there are no webservices by default in Joomla! 3. That's I chose to use the com_api provided by Techjoomla for this purpose. If you would like to use another solution it is up to you to change the code accordingly but I chose com_api for convenience, ease of use and efficiency. Feel free to use what suits your use case the best.
+For j4x -> j3x communication it is more tricky because there are no webservices by default in Joomla! 3. That's why I chose to use the com_api provided by Techjoomla for this purpose. If you would like to use another solution it is up to you to change the code accordingly but I chose com_api for convenience, ease of use and efficiency. Feel free to use what suits your use case the best.
 
 # INSTRUCTIONS
 - Get the latest build in build directory or build it yourself by typing "make all" in your terminal after cloning this repository.
