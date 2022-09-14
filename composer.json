@@ -1,13 +1,13 @@
 {
-  "name": "alexandreelise/plg_system_jxj",
+  "name": "alexapi/plg_system_jxj",
   "description": "Make 2 Joomla! websites communicate via webservices",
   "minimum-stability": "dev",
   "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Alexandre ELISÉ",
-      "email": "contact@alexandre-elise.fr",
-      "homepage": "https://alexandre-elise.fr"
+      "email": "contact@alexandree.io",
+      "homepage": "https://alexandree.io"
     }
   ],
   "config": {
@@ -19,8 +19,7 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master",
+    "roave/security-advisories": "dev-latest",
     "phpunit/phpunit": "^9",
-    "phpdocumentor/phpdocumentor": "^v2.9.1"
   }
 }
