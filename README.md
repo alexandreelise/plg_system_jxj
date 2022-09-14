@@ -1,4 +1,4 @@
-# JxJ : Joomla! "times" Joomla!
+# JxJ : Joomla! "multiplies" Joomla!
 
 ## plg_system_jxj
 TLDR; JXJ is system plugin to make 2 Joomla! websites communicate via webservices.
@@ -7,7 +7,7 @@ j3x -> j4x
 j3x <- j4x
 j3x -> j3x
 j4x -> j4x
-I called it JxJ pronounced J "x" J because it's Joomla! times Joomla!, Joomla! website communicating with another Joomla! website. That's it. Kinda like a CROSS JOIN for geeky database folks and girls.
+I called it JxJ pronounced J "x" J because it's Joomla! multiplies Joomla!, Joomla! website communicating with another Joomla! website. That's it. Kinda like a CROSS JOIN for geeky database folks and girls.
 
 
 ## WHY?
