@@ -12,7 +12,4 @@ gen: ./src ## Create extension zip file
 	&& zip -9 -r $$(dirname $(BUILD_DIR))/build/$$(basename $$(dirname $(CURRENT_DIR)))_$(CURRENT_DATETIME).zip . \
 	&& cd ..
 
-doc: ./src ./docs ./tests ## Generate documentation
-	$(CURRENT_DIR)/vendor/bin/phpdoc
-
-all: gen doc
+all: gen
