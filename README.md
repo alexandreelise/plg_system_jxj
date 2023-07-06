@@ -11,7 +11,7 @@ I called it JxJ pronounced J "x" J because it's Joomla! multiplies Joomla!, Joom
 
 
 ## WHY?
-My name is Alexandre ELISÉ, I am a French web developer and Joomla! specialist. The idea came from a demo I needed to make for Virtual Joomladay France on Friday June 12th 2020. A friend of mine, Marc, told me that it would be great to make two Joomla! websites communicate together. 
+My name is Alexandre J-S William ELISÉ, I am a French web developer and Joomla! specialist. The idea came from a demo I needed to make for Virtual Joomladay France on Friday June 12th 2020. A friend of mine, Marc DECHÈVRE, told me that it would be great to make two Joomla! websites communicate together. 
 
 ## WHAT?
 It is a unified system plugin that should work on both Joomla! 3.9 and Joomla! 4.x
