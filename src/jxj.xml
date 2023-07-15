@@ -1,54 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<extension type="plugin" version="3.9" group="system" method="upgrade">
-    <name>plg_system_jxj</name>
-    <author>Alexandre ELISÉ</author>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_JXJ_TITLE</name>
+    <author>Mr Alexandre J-S William ELISÉ</author>
     <creationDate>2020-06-11</creationDate>
-    <copyright>Copyright (C) 2020 Alexandre ELISÉ. All rights reserved.</copyright>
-    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <authorEmail>contact@alexandre-elise.fr</authorEmail>
-    <authorUrl>alexandre-elise.fr</authorUrl>
-    <version>0.1.0</version>
+    <copyright>Copyright (C) 2020 - present. Mr Alexandre J-S William ELISÉ. All rights reserved.</copyright>
+    <license>GNU Affero General Public License v3.0 or later</license>
+    <authorEmail>code@apiadept.com</authorEmail>
+    <authorUrl>https://apidept.com</authorUrl>
+    <version>1.0.0</version>
     <description>PLG_SYSTEM_JXJ_XML_DESCRIPTION</description>
+    <namespace path="src">AlexApi\Plugin\System\Jxj</namespace>
+    <scriptfile>script.php</scriptfile>
     <files>
-        <filename plugin="jxj">jxj.php</filename>
-        <folder>helper</folder>
-        <folder>language</folder>
+        <folder plugin="jxj">services</folder>
+        <filename>LICENSE</filename>
+        <filename>script.php</filename>
+        <folder>src</folder>
+        <folder>forms</folder>
     </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_jxj.ini</language>
+        <language tag="en-GB">en-GB/plg_system_jxj.sys.ini</language>
+        <language tag="fr-FR">fr-FR/plg_system_jxj.ini</language>
+        <language tag="fr-FR">fr-FR/plg_system_jxj.sys.ini</language>
+    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="website_version"
-                       type="list"
-                       default="0"
-                       label="PLG_SYSTEM_JXJ_WEBSITE_VERSION_LABEL"
-                       description="PLG_SYSTEM_JXJ_WEBSITE_VERSION_DESCRIPTION"
-                       filter="uint"
-                >
-                    <option value="0">PLG_SYSTEM_JXJ_WEBSITE_VERSION_0</option>
-                    <option value="3">PLG_SYSTEM_JXJ_WEBSITE_VERSION_3</option>
-                    <option value="4">PLG_SYSTEM_JXJ_WEBSITE_VERSION_4</option>
-                </field>
-                <field name="base_path"
-                       type="url"
-                       filter="url"
-                       validate="url"
-                       default=""
-                       hint="PLG_SYSTEM_JXJ_BASE_PATH_HINT"
-                       label="PLG_SYSTEM_JXJ_BASE_PATH_LABEL"
-                       description="PLG_SYSTEM_JXJ_BASE_PATH_DESCRIPTION"
-                />
-                <field name="api_token"
-                       type="text"
-                       filter="string"
-                       label="PLG_SYSTEM_JXJ_API_TOKEN_LABEL"
-                       description="PLG_SYSTEM_JXJ_API_TOKEN_DESCRIPTION"/>
-                <field name="category_id"
-                       type="text"
-                       filter="uint"
-                       default="2"
-                       label="PLG_SYSTEM_JXJ_CATEGORY_ID_LABEL"
-                       description="PLG_SYSTEM_JXJ_CATEGORY_ID_DESCRIPTION"/>
-
+                <field name="jboxes"
+                       type="subform"
+                       label="PLG_SYSTEM_JXJ_JBOXES_LABEL"
+                       description="PLG_SYSTEM_JXJ_JBOXES_DESCRIPTION"
+                       formsource="/plugins/system/jxj/forms/jbox.xml"
+                       layout="joomla.form.field.subform.repeatable-table"
+                       groupByFieldset="true"
+                       multiple="true"
+                       min="1"
+                       max="1000"
+                ></field>
             </fieldset>
         </fields>
     </config>

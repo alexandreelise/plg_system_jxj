@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title>plg_system_jxj</title>
+    <title>Project</title>
     <parser>
         <target>docs</target>
         <encoding>utf8</encoding>
         <markers>
             <item>TODO</item>
             <item>FIXME</item>
+            <item>NOTE</item>
+            <item>REVIEW</item>
         </markers>
         <extensions>
             <extension>php</extension>
-            <extension>php3</extension>
-            <extension>phtml</extension>
         </extensions>
-        <visibility/>
+        <visibility>public</visibility>
     </parser>
     <transformer>
         <target>docs</target>
@@ -22,13 +22,11 @@
         <level>warn</level>
     </logging>
     <transformations>
-        <template name="responsive" />
+        <template name="clean" />
     </transformations>
     <files>
-        <file>test.php</file>
-        <file>bin/*</file>
-        <directory>src</directory>
-        <directory>tes??</directory>
-        <ignore>test/*</ignore>
+        <directory>src/src</directory>
+        <ignore>**/tests/*</ignore>
+        <ignore>**/vendor/*</ignore>
     </files>
 </phpdoc>

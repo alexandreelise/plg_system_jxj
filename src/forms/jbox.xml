@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <form>
-    <fieldset name="fieldset_jbox">
+    <fieldset name="jbox">
         <field name="website_version"
                type="list"
-               default="0"
                label="PLG_SYSTEM_JXJ_WEBSITE_VERSION_LABEL"
                description="PLG_SYSTEM_JXJ_WEBSITE_VERSION_DESCRIPTION"
+               class="advancedSelect"
+               default="0"
                filter="uint"
         >
             <option value="0">PLG_SYSTEM_JXJ_WEBSITE_VERSION_0</option>
-            <option value="3">PLG_SYSTEM_JXJ_WEBSITE_VERSION_3</option>
             <option value="4">PLG_SYSTEM_JXJ_WEBSITE_VERSION_4</option>
+            <option value="5">PLG_SYSTEM_JXJ_WEBSITE_VERSION_5</option>
         </field>
         <field name="direction"
                type="radio"
@@ -18,7 +19,7 @@
                description="PLG_SYSTEM_JXJ_DIRECTION_DESCRIPTION"
                default="0"
                filter="uint"
-               class="btn-group btn-groupyesno"
+               class="switcher"
         >
             <option value="0">PLG_SYSTEM_JXJ_DIRECTION_0</option>
             <option value="1">PLG_SYSTEM_JXJ_DIRECTION_1</option>
@@ -26,23 +27,27 @@
         </field>
         <field name="base_path"
                type="url"
+               label="PLG_SYSTEM_JXJ_BASE_PATH_LABEL"
+               description="PLG_SYSTEM_JXJ_BASE_PATH_DESCRIPTION"
                filter="url"
                validate="url"
                default=""
                hint="PLG_SYSTEM_JXJ_BASE_PATH_HINT"
-               label="PLG_SYSTEM_JXJ_BASE_PATH_LABEL"
-               description="PLG_SYSTEM_JXJ_BASE_PATH_DESCRIPTION"
         />
         <field name="api_token"
-               type="text"
-               filter="string"
+               type="password"
                label="PLG_SYSTEM_JXJ_API_TOKEN_LABEL"
-               description="PLG_SYSTEM_JXJ_API_TOKEN_DESCRIPTION"/>
+               description="PLG_SYSTEM_JXJ_API_TOKEN_DESCRIPTION"
+               default=""
+        />
         <field name="category_id"
-               type="text"
+               type="category"
+               label="PLG_SYSTEM_JXJ_CATEGORY_ID_LABEL"
+               description="PLG_SYSTEM_JXJ_CATEGORY_ID_DESCRIPTION"
                filter="uint"
                default="2"
-               label="PLG_SYSTEM_JXJ_CATEGORY_ID_LABEL"
-               description="PLG_SYSTEM_JXJ_CATEGORY_ID_DESCRIPTION"/>
+               show_root="true"
+               extension="com_content"
+        />
     </fieldset>
 </form>
